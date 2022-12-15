@@ -7,3 +7,9 @@ navigation:
     url: /
   - title: War and movies
     url: index
+  - title: First question
+    url: first
+  - title: Second question
+    url: second
+  - title: Third question 
+    url: third
