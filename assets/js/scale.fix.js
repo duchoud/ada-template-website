@@ -15,3 +15,8 @@ function gestureStart() {
     }
   }
 }
+var setter = window.dash_embedded_component.renderDash(
+    { url_base_pathname: "http://127.0.0.1:8060/" },
+    'dash-app',
+    sharedData
+);
