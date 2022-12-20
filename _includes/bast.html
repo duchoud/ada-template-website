@@ -12,9 +12,9 @@
 
     function changeImage(Form) {
         
-        genre = Form.elements["movie_genre"].value;
-        window = Form.element["window"].value;
-        time = Form.element["time"].value;
+        //genre = Form.elements["movie_genre"].value;
+        //window = Form.element["window"].value;
+        //time = Form.element["time"].value;
         let image = document.querySelector('#img');
         image.setAttribute('src', "assets/img/bast_img/WWIIcountwar10.png")
     }
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    helloooo
+    helloo
 <br>
     <img id ="img" src = "assets/img/bast_img/image_test.jpg" width = "400" alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"><br>
@@ -30,16 +30,23 @@
     <fieldset>
         <legend>Image</legend>
         <label for="img">Image</label><br>
-        <input type="radio" id = "time" name="time" checked>tot
-        <input type="radio" id = "time" name="time">WWII
-        <input type="radio" id = "time" name="time">Vietnam
-        <input type="radio" id = "time" name="time">Iraq   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Window
+        <input type="radio" id = "time1" name="time" checked>
+        <label for="time1">tot</label><br>
+        <input type="radio" id = "time2" name="time">
+        <label for="time2">WWII</label><br>
+        <input type="radio" id = "time3" name="time">
+        <label for="time3">Vietnam</label><br>
+        <input type="radio" id = "time4" name="time">
+        <label for="time4">Iraq</label><br>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Window
         <input type="range" id="window" name="window" min ="2" max ="10" step ="2" oninput="this.nextElementSibling.value = this.value">
         <output>6</output>&nbsp;&nbsp;&nbsp;
         <br>
-        <input type="radio" id = "movie_genre" name="movie_genre" checked>war
-        <input type="radio" id = "movie_genre" name="movie_genre">action
-        <input type="radio" id = "movie_genre" name="movie_genre">comedy
+        <input type="radio" id = "movie_genre1" name="movie_genre" checked>war
+        <label for="movie_genre1">war</label><br>
+        <input type="radio" id = "movie_genre2" name="movie_genre">action
+        <label for="movie_genre2">action</label><br>
+        <input type="radio" id = "movie_genre3" name="movie_genre">comedy
+        <label for="movie_genre3">comedy</label><br>
         <br>
         <input type="submit" value= "go">
      </fieldset>
