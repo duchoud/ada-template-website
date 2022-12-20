@@ -41,8 +41,8 @@ hello world
         <input type="radio" id = "movie_genre" name="movie_genre">action
         <input type="radio" id = "movie_genre" name="movie_genre">comedy
         <br>
-        <output>time.value + 'count' + movie_genre.value + window.value</output>
-        <input type="button" onclick="changeImage(time.value + 'count' + movie_genre.value + window.value)" value= "go">
+        <output>eval(time.value + 'count' + movie_genre.value + window.value)</output>
+        <input type="button" onclick="changeImage(eval(time.value + 'count' + movie_genre.value + window.value))" value= "go">
 </form><br>
 <br>
 <img id ="img" src = "../assets/img/bast_img/image_test.jpg" width = "400"><br>
