@@ -1,5 +1,6 @@
 ---
 layout: default
+background: '/img/What-does-the-US-vs.-China-trade-war-do-to-gold.jpg'
 ---
 
 # Wars and movies 
