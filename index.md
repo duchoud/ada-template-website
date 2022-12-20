@@ -1,5 +1,6 @@
 ---
 layout: default
+background: '/assets/img/images.jpg'
 ---
 
 # Wars and movies 
