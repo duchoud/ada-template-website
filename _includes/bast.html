@@ -12,10 +12,11 @@
 
     function changeImage(Form) {
         
-        genre = Form.elements["movie_genre"].value;
+        genre = document.querySelector("#movie_genre").value;
+        document.write(genre)
         window = Form.element["window"].value;
         time = Form.element["time"].value;
-        document.write(genre)
+        
         let image = document.querySelector('#img');
         image.setAttribute('src', "assets/img/bast_img/WWIIcountwar10.png")
     }
