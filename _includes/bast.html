@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    function preLoad() {
+    a1 = new Image; a1.src = 'img_test.png';  
+    a2 = new Image; a2.src = 'imgtest_2.png';
+    }
+
+    function changeImage(im) {
+        let image = document.querySelector('#img')
+        image.setAttribute('src', im+'.png')
+        //eval(im+".png");
+}
+</script>   
+</head>
+
+<body onLoad= "preLoad()">
+
+hello world
+<br>
+<form autocomplete="off">
+    <fieldset>
+        <legend>Image</legend>
+        <label for="img">Image</label><br>
+        <input type="radio" id = "time" name="time" checked>tot
+        <input type="radio" id = "time" name="time">WWII
+        <input type="radio" id = "time" name="time">Vietnam
+        <input type="radio" id = "time" name="time">Iraq   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Window
+        <input type="range" id="window" name="window" min ="2" max ="10" step ="2" oninput="this.nextElementSibling.value = this.value">
+        <output>6</output>&nbsp;&nbsp;&nbsp;
+        <select name="genre", id = "movie_genre">
+            <option value = "war">war</option> 
+            <option value = "action">action</option> 
+            <option value = "comedy">comedy</option> 
+            <option value = "drama">drama</option> 
+        </select>
+        <br>
+        <input type="button" onclick="changeImage('imgtest_2')" value= "go">
+</form><br>
+<br>
+<img id ="img" src = "img_test.png" width = "400"><br>
+</body>
+
+</html>
