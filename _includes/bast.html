@@ -10,10 +10,10 @@
 
 <script>
 
-    function changeImage() {
-        genre = document.getElementById("movie_genre").value;
-        window = document.getElementById("window").value;
-        time = document.getElementById("time").value;
+    function changeImage(Form) {
+        genre = document.querySelector("#movie_genre").value;
+        window = document.querySelector("#window").value;
+        time = document.querySelector("#time").value;
         let image = document.querySelector('#img')
         image.setAttribute('src', 'assets/img/bast_img/+'time+'count'+movie_genre+window+'.png')
         //eval(im+".png");
@@ -25,7 +25,7 @@
 <br>
     <img id ="img" src = "assets/img/bast_img/image_test.jpg" width = "400" alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"><br>
-<form onsubmit="return changeImage(this)">
+<form onsubmit="return changeImage(this);">
     <fieldset>
         <legend>Image</legend>
         <label for="img">Image</label><br>
