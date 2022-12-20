@@ -11,7 +11,7 @@
 <script>
 
     function changeImage(Form) {
-           out = "";
+        out = "";
         time = Form.time;
         for (i = 0; i < time.length; i++) {
             if (time[i].checked) {
@@ -22,9 +22,8 @@
         out += "count";
         genre = Form.movie_genre;
         for (i = 0; i < genre.length; i++) {
-            
             if (genre[i].checked) {
-                out = genre[i].value;
+                out += genre[i].value;
                 break;
             }
         }
