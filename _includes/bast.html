@@ -30,6 +30,7 @@
         }
         WWindow = Form.window.value;
         let image = document.querySelector('#img');
+        document.write(time,genre,WWindow)
         image.setAttribute('src', "assets/img/bast_img/"+time+"count"+genre+WWindow+".png")
     }
 </script>   
@@ -55,11 +56,11 @@
         <input type="range" id="window" name="window" min ="2" max ="10" step ="2" oninput="this.nextElementSibling.value = this.value">
         <output>6</output>&nbsp;&nbsp;&nbsp;
         <br>
-        <input type="radio" id = "movie_genre1" name="movie_genre" value = "war"  checked>war
+        <input type="radio" id = "movie_genre1" name="movie_genre" value = "war"  checked>
         <label for="movie_genre1">war</label><br>
-        <input type="radio" id = "movie_genre2" name="movie_genre" value = "action">action
+        <input type="radio" id = "movie_genre2" name="movie_genre" value = "action">
         <label for="movie_genre2">action</label><br>
-        <input type="radio" id = "movie_genre3" name="movie_genre" value = "comedy">comedy
+        <input type="radio" id = "movie_genre3" name="movie_genre" value = "comedy">
         <label for="movie_genre3">comedy</label><br>
         <br>
         <input type="submit" value= "go">
