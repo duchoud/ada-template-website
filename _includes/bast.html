@@ -12,9 +12,23 @@
 
     function changeImage(Form) {
         
-        genre = document.querySelector("#movie_genre");
-        window = document.querySelector("#window");
-        time =document.querySelector("#time")
+        genre = Form.movie_genre;
+        for (i = 0; i < genre.length; i++) {
+            
+            if (genre[i].checked) {
+                genre = genre[i].value;
+                break;
+            }
+        }
+        
+        time = Form.time;
+        for (i = 0; i < time.length; i++) {
+            if (time[i].checked) {
+                time = time[i].value;
+                break;
+            }
+        }
+        WWindow = Form.window.value;
         let image = document.querySelector('#img');
         image.setAttribute('src', "assets/img/bast_img/WWIIcountwar10.png")
     }
@@ -30,22 +44,22 @@
     <fieldset>
         <legend>Image</legend>
         <label for="img">Image</label><br>
-        <input type="radio" id = "time1" name="time" checked>
+        <input type="radio" id = "time1" name="time" value = "tot" checked>
         <label for="time1">tot</label><br>
-        <input type="radio" id = "time2" name="time">
+        <input type="radio" id = "time2" name="time" value = "WWII">
         <label for="time2">WWII</label><br>
-        <input type="radio" id = "time3" name="time">
+        <input type="radio" id = "time3" name="time" value = "Vietnam">
         <label for="time3">Vietnam</label><br>
-        <input type="radio" id = "time4" name="time">
+        <input type="radio" id = "time4" name="time" value = "Iraq">
         <label for="time4">Iraq</label><br>   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Window
         <input type="range" id="window" name="window" min ="2" max ="10" step ="2" oninput="this.nextElementSibling.value = this.value">
         <output>6</output>&nbsp;&nbsp;&nbsp;
         <br>
-        <input type="radio" id = "movie_genre1" name="movie_genre" checked>war
+        <input type="radio" id = "movie_genre1" name="movie_genre" value = "war"  checked>war
         <label for="movie_genre1">war</label><br>
-        <input type="radio" id = "movie_genre2" name="movie_genre">action
+        <input type="radio" id = "movie_genre2" name="movie_genre" value = "action">action
         <label for="movie_genre2">action</label><br>
-        <input type="radio" id = "movie_genre3" name="movie_genre">comedy
+        <input type="radio" id = "movie_genre3" name="movie_genre" value = "comedy">comedy
         <label for="movie_genre3">comedy</label><br>
         <br>
         <input type="submit" value= "go">
