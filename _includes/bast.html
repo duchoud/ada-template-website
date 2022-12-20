@@ -10,8 +10,8 @@
 
 <script>
     function preLoad() {
-    a1 = new Image; a1.src = '../assets/img/bast_img/image_test.jpg';  
-    a2 = new Image; a2.src = '../assets/img/images.jpg';
+    a1 = new Image; a1.src = 'assets/img/bast_img/image_test.jpg';  
+    a2 = new Image; a2.src = 'assets/img/images.jpg';
     }
 
     function changeImage() {
@@ -19,7 +19,7 @@
         window = document.getElementById("window").value;
         time = document.getElementById("time").value;
         let image = document.querySelector('#img')
-        image.setAttribute('src', '../assets/img/bast_img/+'time+'count'+movie_genre+window+'.png')
+        image.setAttribute('src', 'assets/img/bast_img/+'time+'count'+movie_genre+window+'.png')
         //eval(im+".png");
 }
 </script>   
@@ -50,7 +50,7 @@ hello world
         <input type="button" onclick="changeImage()" value= "go">
 </form><br>
 <br>
-<img id ="img" src = "../assets/img/bast_img/image_test.jpg" width = "400"><br>
+<img id ="img" src = "assets/img/bast_img/image_test.jpg" width = "400"><br>
 </body>
 
 </html>
