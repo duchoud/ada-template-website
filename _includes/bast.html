@@ -9,10 +9,6 @@
     <title>Document</title>
 
 <script>
-    function preLoad() {
-    a2 = new Image; a2.src = 'assets/img/bast_img/image_test.jpg';  
-    a1 = new Image; a1.src = 'assets/img/images.jpg';
-    }
 
     function changeImage() {
         genre = document.getElementById("movie_genre").value;
@@ -26,8 +22,6 @@
 </head>
 
 <body>
-
-hello world
 <br>
     <img id ="img" src = "assets/img/bast_img/image_test.jpg" width = "400" alt="The head and torso of a dinosaur skeleton;
           it has a large head with long sharp teeth"><br>
@@ -46,12 +40,11 @@ hello world
         <input type="radio" id = "movie_genre" name="movie_genre">action
         <input type="radio" id = "movie_genre" name="movie_genre">comedy
         <br>
-        <output>changeImage()</output>
-        <input type="button" onclick="changeImage()" value= "go">
+        <input type="button" onclick=changeImage() value= "go">
      </fieldset>
-</form><br>
+</form> 
 <br>
-<img id ="img" src = "assets/img/bast_img/image_test.jpg" width = "400"><br>
+<br>
 </body>
 
 </html>
