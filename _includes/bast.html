@@ -12,19 +12,19 @@
 
     function changeImage(Form) {
            out = "";
+        time = Form.time;
+        for (i = 0; i < time.length; i++) {
+            if (time[i].checked) {
+                out += time[i].value;
+                break;
+            }
+        }
+        out += "count";
         genre = Form.movie_genre;
         for (i = 0; i < genre.length; i++) {
             
             if (genre[i].checked) {
                 out = genre[i].value;
-                break;
-            }
-        }
-        out += "count";
-        time = Form.time;
-        for (i = 0; i < time.length; i++) {
-            if (time[i].checked) {
-                out += time[i].value;
                 break;
             }
         }
