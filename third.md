@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Third question test
+# Third question
 
 {% include bast.html %}
 
