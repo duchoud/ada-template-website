@@ -37,11 +37,14 @@ hello world
         <input type="range" id="window" name="window" min ="2" max ="10" step ="2" oninput="this.nextElementSibling.value = this.value">
         <output>6</output>&nbsp;&nbsp;&nbsp;
         <br>
-        <select name="genre", id = "movie_genre">
-            <option value = "war">war</option> 
-            <option value = "action">action</option> 
-            <option value = "comedy">comedy</option> 
-        </select>
+        <input type="radio" id = "movie_genre" name="movie_genre" checked>war
+        <input type="radio" id = "movie_genre" name="movie_genre">action
+        <input type="radio" id = "movie_genre" name="movie_genre">comedy
+        //<select name="genre", id = "movie_genre">
+        //    <option value = "war">war</option> 
+        //    <option value = "action">action</option> 
+        //    <option value = "comedy">comedy</option> 
+        //</select>
         <br>
         <input type="button" onclick="changeImage(time.value + 'count' + movie_genre.value + window.value)" value= "go">
 </form><br>
