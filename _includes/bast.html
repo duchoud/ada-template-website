@@ -14,9 +14,12 @@
     a2 = new Image; a2.src = '../assets/img/images.jpg';
     }
 
-    function changeImage(im) {
+    function changeImage() {
+        genre = document.getElementById("movie_genre").value;
+        window = document.getElementById("window").value;
+        time = document.getElementById("time").value;
         let image = document.querySelector('#img')
-        image.setAttribute('src', ../assets/img/bast_img/im+'.png')
+        image.setAttribute('src', '../assets/img/bast_img/+'time+'count'+movie_genre+window+'.png')
         //eval(im+".png");
 }
 </script>   
@@ -41,8 +44,8 @@ hello world
         <input type="radio" id = "movie_genre" name="movie_genre">action
         <input type="radio" id = "movie_genre" name="movie_genre">comedy
         <br>
-        <output>eval(time.value + 'count' + movie_genre.value + window.value)</output>
-        <input type="button" onclick="changeImage(eval(time.value + 'count' + movie_genre.value + window.value))" value= "go">
+        <output>time.value,'count',movie_genre.value,window.value</output>
+        <input type="button" onclick="changeImage()" value= "go">
 </form><br>
 <br>
 <img id ="img" src = "../assets/img/bast_img/image_test.jpg" width = "400"><br>
