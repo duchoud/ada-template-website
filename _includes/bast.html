@@ -11,27 +11,27 @@
 <script>
 
     function changeImage(Form) {
-        
+           out = "";
         genre = Form.movie_genre;
         for (i = 0; i < genre.length; i++) {
             
             if (genre[i].checked) {
-                genre = genre[i].value;
+                out = genre[i].value;
                 break;
             }
         }
-        
+        out += "count";
         time = Form.time;
         for (i = 0; i < time.length; i++) {
             if (time[i].checked) {
-                time = time[i].value;
+                out += time[i].value;
                 break;
             }
         }
-        WWindow = Form.window.value;
+        out += Form.window.value;
         let image = document.querySelector('#img');
-        document.write(time,genre,WWindow)
-        image.setAttribute('src', "assets/img/bast_img/"+time+"count"+genre+WWindow+".png")
+        document.write(out)
+        image.setAttribute('src', "assets/img/bast_img/"+out+".png")
     }
 </script>   
 </head>
