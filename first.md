@@ -1,6 +1,5 @@
 ---
-layout: Home
-background: '/img/images.jpg'
+layout: default
 ---
 
 # First question
