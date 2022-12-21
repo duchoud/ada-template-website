@@ -24,3 +24,4 @@ layout: default
 ![image](assets/img/Images_site_bastien/heatmap_1990.jpg)
 ![image](assets/img/Images_site_bastien/heatmap_2002.jpg)
 ![image](assets/img/Images_site_bastien/heatmap_general.jpg)
+![image](assets/img/Images_site_bastien/war_movie_trend2002.jpg)
