@@ -7,8 +7,6 @@ layout: default
 {% include test.html %}
 {% include map_elements/interactive_map.html %}
 
-{% include interactive_plots.html %}
-
 
 ![image](assets/img/Images_site_bastien/afteraction.png)
 ![image](assets/img/Images_site_bastien/aftercomedy.png)
