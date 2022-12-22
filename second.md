@@ -5,7 +5,7 @@ layout: default
 # Second question
 
 {% include test.html %}
-{% include map_elements/interactive_map.html %}
+{% include interactive_map.html %}
 
 
 ![image](assets/img/Images_site_bastien/afteraction.png)
