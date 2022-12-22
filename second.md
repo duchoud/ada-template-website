@@ -5,7 +5,7 @@ layout: default
 # Second question
 
 {% include test.html %}
-{% include map_test.html %}
+{% include map_elements/interactive_map.html %}
 
 {% include interactive_plots.html %}
 
