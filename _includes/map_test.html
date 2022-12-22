@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>leaflet basic example</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/MarkerCluster.Default.css" />
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.5.0/leaflet.markercluster.js"></script>
+        <script src="exp_popplaces.js"></script>
+        <script src="exp_ne10mparksandprotectedlandspoint.js"></script>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+ 
+<style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            html, body, #map {
+                height: 100%;
+            }
+        </style>
+ 
+    </head>
+    <body>
+ 
+<div id="map"></div>
+ 
+ 
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:19
+        }).fitBounds([[-22.6665544576,-206.634809944],[100.520856024,-21.8536942211]]);
+        var basemap_0 = L.tileLayer('http://{s}.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png');
+        basemap_0.addTo(map);
+        function pop_prot(feature, layer) {
+            var popupContent = 'name: ' + String(feature.properties['unit_name']);
+            layer.bindPopup(popupContent);
+        }
+        function protecland_marker(feature, latlng) {
+            return L.circleMarker(latlng, {
+                radius: 8.0,
+                fillColor: '#11fe00',
+                color: '#000000',
+                weight: 1,
+                opacity: 1.0,
+                fillOpacity: 0.8
+            })
+        }
+        var protecland = new L.geoJson(exp_ne10mparksandprotectedlandspoint,{
+            onEachFeature: pop_prot,
+            pointToLayer: protecland_marker
+        });
+        protecland.addTo(map);
+        function pop_popplaces(feature, layer) {
+            var popupContent = 'name: ' + String(feature.properties['name']) + '<br>pop_max: ' + String(feature.properties['pop_max']);
+            layer.bindPopup(popupContent);
+        }
+        function popplaces_marker(feature, latlng) {
+            return L.circleMarker(latlng, {
+                radius: 8.0,
+                fillColor: '#ff0000',
+                color: '#000000',
+                weight: 1,
+                opacity: 1.0,
+                fillOpacity: 0.8
+            })
+        }
+        var popplaces = new L.geoJson(exp_popplaces,{
+            onEachFeature: pop_popplaces,
+            pointToLayer: popplaces_marker
+        });
+        var cluster_popplaces= new L.MarkerClusterGroup({showCoverageOnHover: false});
+        cluster_popplaces.addLayer(popplaces);
+        cluster_popplaces.addTo(map);
+        var baseMaps = {'OSM Black & White': basemap_0};
+        controler = L.control.layers(baseMaps,{"places": cluster_popplaces,"protected land points": protecland},{collapsed:false}).addTo(map);
+    </script>
+</body>
+</html>

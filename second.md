@@ -6,3 +6,4 @@ layout: default
 
 {% include test.html %}
 {% include interactive_plots.html %}
+{% include map_test.html %}
